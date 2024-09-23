@@ -305,7 +305,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 11.113579
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 4.3, y: 0.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -351,6 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  smoothSpeed: 0.125
 --- !u!1 &543198286
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,8 +400,10 @@ MonoBehaviour:
   platform: {fileID: 8882925520037461098, guid: 479ea1966f4588746a33792bede9dd36, type: 3}
   generationPoint: {fileID: 1407376363}
   distanceBetween: 5
-  distanceBetweenMin: 0
-  distanceBetweenMax: 10
+  distanceBetweenMin: 5
+  distanceBetweenMax: 5
+  platformColors: []
+  verticalOffsetRange: 5
 --- !u!1 &608207557
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  jumpForce: 25
+  jumpForce: 30
   isGrounded: 0
   whatIsGroundLayer:
     serializedVersion: 2
@@ -607,7 +611,7 @@ Transform:
   m_GameObject: {fileID: 1407376362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.01, y: -1.46, z: 0}
+  m_LocalPosition: {x: 127.8, y: -1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

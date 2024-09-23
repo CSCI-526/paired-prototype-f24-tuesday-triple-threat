@@ -5,21 +5,18 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public PlayerController player;
-    private Vector3 lastPlayerPosition;
-    private float distanceToMove;
+    public Vector3 offset; 
+    public float smoothSpeed = 0.125f;
 
-    // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
-        lastPlayerPosition = player.transform.position;
+        player = FindObjectOfType<PlayerController>(); 
+        offset = transform.position - player.transform.position; 
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        distanceToMove = player.transform.position.x - lastPlayerPosition.x;
-        transform.position = new Vector3(transform.position.x + distanceToMove, transform.position.y, transform.position.z);
-        lastPlayerPosition = player.transform.position;
+        Vector3 desiredPosition = player.transform.position + offset; 
+        transform.position = desiredPosition; 
     }
 }
