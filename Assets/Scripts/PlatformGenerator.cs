@@ -11,10 +11,10 @@ public class PlatformGenerator : MonoBehaviour
     public float distanceBetweenMax;
     private float platformWidth;
 
-    // Array of colors to choose from
+    // Colors
     public Color[] platformColors;
 
-    // Vertical offset range
+    // Select vertical offset range
     public float verticalOffsetRange = 10.0f;
 
     // Start is called before the first frame update
@@ -22,7 +22,6 @@ public class PlatformGenerator : MonoBehaviour
     {
         platformWidth = platform.transform.localScale.x;
 
-        // Optionally, you can initialize the platformColors array with a set of colors
         platformColors = new Color[] {
             Color.red,
             Color.blue,
