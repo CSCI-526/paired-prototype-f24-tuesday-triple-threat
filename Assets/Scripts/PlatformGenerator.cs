@@ -46,6 +46,8 @@ public class PlatformGenerator : MonoBehaviour
             // Instantiate the platform
             GameObject newPlatform = Instantiate(platform, transform.position, transform.rotation);
 
+            newPlatform.tag = "Platform";
+
             // Random colors for platform
             Renderer platformRenderer = newPlatform.GetComponent<Renderer>();
             platformRenderer.material.color = platformColors[Random.Range(0, platformColors.Length)];
