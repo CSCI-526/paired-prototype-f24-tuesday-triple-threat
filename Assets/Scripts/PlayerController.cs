@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGroundLayer;
     private Collider2D playerCollider;
     public GameObject endGameUI;
+    public ScoreManager scoreManager;
 
     private SpriteRenderer spriteRenderer;
     private Color[] colorOrder = { Color.red, Color.blue, Color.green, Color.yellow };
@@ -102,6 +103,13 @@ public class PlayerController : MonoBehaviour
             {
                 EndGame(); 
                 Debug.Log("Game Over! Player landed on a different color platform.");
+            } else {
+                // Score logic
+                if (scoreManager != null)
+                {
+                    scoreManager.score++;
+                    scoreManager.UpdateScoreText();
+                }
             }
         }
     }
