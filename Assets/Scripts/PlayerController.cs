@@ -139,6 +139,6 @@ public class PlayerController : MonoBehaviour
     }
     public void RetryGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // Reloads the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
