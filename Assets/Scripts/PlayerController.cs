@@ -131,7 +131,14 @@ public class PlayerController : MonoBehaviour
         {
             endGameUI.SetActive(true); 
         }
-        Destroy(gameObject);
-        
+        //Destroy(gameObject);
+        spriteRenderer.enabled = false;
+        playerRigidbody.simulated = false;
+        playerCollider.enabled = false;
+
+    }
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // Reloads the current scene
     }
 }
