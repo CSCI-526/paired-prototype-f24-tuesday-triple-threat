@@ -829,8 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   maxScore: 0
-  scoreText: {fileID: 0}
-  maxScoreText: {fileID: 0}
+  scoreText: {fileID: 2037958090}
 --- !u!114 &1134812731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,7 +976,6 @@ MonoBehaviour:
   score: 0
   maxScore: 0
   scoreText: {fileID: 2037958090}
-  maxScoreText: {fileID: 0}
 --- !u!4 &1557162174
 Transform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,6 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public int maxScore = 0;
     public Text scoreText;
-    public Text maxScoreText;
 
     // Start is called before the first frame update
     void Start()
