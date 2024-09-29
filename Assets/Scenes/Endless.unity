@@ -1071,7 +1071,7 @@ MonoBehaviour:
     m_Bits: 128
   endGameUI: {fileID: 1814669672}
   scoreManager: {fileID: 1557162173}
-  fallThreshold: -50
+  fallThreshold: -100
   fallCheckDelay: 0.5
   startGameUI: {fileID: 1398384554}
 --- !u!1 &620164768
