@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
 
     private GameObject currentPlatform;
 
+    public GameObject startGameUI;
+    private bool gameStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,11 +40,24 @@ public class PlayerController : MonoBehaviour
         {
             endGameUI.SetActive(false);
         }
+
+        playerRigidbody.simulated = false;
+
+        if (startGameUI != null)
+        {
+            startGameUI.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (!gameStarted)
+        {
+            return; 
+        }
+
         isGrounded = Physics2D.IsTouchingLayers(playerCollider, whatIsGroundLayer);
 
         playerRigidbody.velocity = new Vector2(moveSpeed, playerRigidbody.velocity.y);
@@ -122,7 +138,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // End game logic
+    
     void EndGame()
     {
         
@@ -140,5 +156,15 @@ public class PlayerController : MonoBehaviour
     public void RetryGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartGame()
+    {
+        gameStarted = true;
+        if (startGameUI != null)
+        {
+            startGameUI.SetActive(false); 
+        }
+        playerRigidbody.simulated = true; 
     }
 }
