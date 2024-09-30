@@ -35,8 +35,3 @@ Crazy Colors is a 2D-platformer game featuring a self transformation mechanic. A
 ## Controls:
 - Color Change: W,S or Up/Down arrow keys
 - Jump: Spacebar/Mouse Click
-
-## Contributions:
-- Dev Kansara: Randomly placed platforms, added colors to platforms, camera movements, Retry mechanism.
-- Atharva Swami: Infinitely loading platforms, player control, scoring mechanism.
-- Pooja Kaulgud: Player color change controls, Player death mechanism, game over screen/Starting screen.
